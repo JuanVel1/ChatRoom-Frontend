@@ -9,13 +9,14 @@ function Login() {
   const [error, setError] = useState("");
   const { enqueueSnackbar } = useSnackbar();
   const navigate = useNavigate();
+  const origin_url = import.meta.env.CLIENT_ORIGIN;
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!username || !roomCode) {
       setError("Please, enter an username and a room code");
     } else {
-      const socket = io("http://localhost:3010"); // Cambia la URL según tu servidor
+      const socket = io(origin_url); // Cambia la URL según tu servidor
       socket.emit("join", { username, room: roomCode });
       console.log(
         `Entering the room ${roomCode} with the username ${username}`

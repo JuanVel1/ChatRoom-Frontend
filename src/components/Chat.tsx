@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import io, { Socket } from 'socket.io-client';
+import io, { Socket } from 'socket.io-client'; 
 
 interface Message {
   user: string;
@@ -18,7 +18,7 @@ const Chat = () => {
   const socketRef = useRef<Socket | null>(null);
 
   useEffect(() => {
-    const socket = io('http://localhost:3010'); // Cambia la URL según tu servidor
+    const socket = io(import.meta.env.CLIENT_ORIGIN); // Cambia la URL según tu servidor
     socketRef.current = socket;
 
     socket.emit('join', { username, room: roomCode });
