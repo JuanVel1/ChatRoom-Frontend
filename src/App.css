@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.ballet-title {
+  font-family: "Ballet", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.alumni-sans-pinstripe-regular-italic {
+  font-family: "Alumni Sans Pinstripe", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.josefin-slab-form {
+  font-family: "Josefin Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+button {
+  width: 100%;
+}
+
+button:hover {
+  background-image: linear-gradient(
+    to top right,
+    var(--tw-gradient-stops)
+  ) !important;
+  --tw-gradient-from: #1e3a8a var(--tw-gradient-from-position) !important;
+  --tw-gradient-to: rgb(30 58 138 / 0) var(--tw-gradient-to-position) !important;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
+  --tw-gradient-to: #78350f var(--tw-gradient-to-position) !important;
+  color: white !important;
+  font-weight: 900 !important;
+}
+
+body {
+  background-image: linear-gradient(to top right, var(--tw-gradient-stops));
+  --tw-gradient-from: #fff2db var(--tw-gradient-from-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: #ffffff var(--tw-gradient-to-position);
+  height: 100vh;
+}
+
+.animated{
+  animation: spin 8s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
