@@ -18,7 +18,8 @@ const Chat = () => {
   const socketRef = useRef<Socket | null>(null);
 
   useEffect(() => {
-    const socket = io(import.meta.env.CLIENT_ORIGIN); // Cambia la URL según tu servidor
+    const socket = io("https://chatroom-backend-2po9.onrender.com"); // Cambia la URL según tu servidor
+    
     socketRef.current = socket;
 
     socket.emit('join', { username, room: roomCode });
