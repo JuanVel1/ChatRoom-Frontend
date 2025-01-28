@@ -52,7 +52,7 @@ const Chat = () => {
         <div className="flex items-center">
           <h1 className="ballet-title text-6xl p-5">Chat room</h1>
           <img
-            src="https://github.com/JuanVel1/ChatRoom-Frontend/blob/main/src/assets/CS_Star_2.svg"
+            src="https://raw.githubusercontent.com/JuanVel1/ChatRoom-Frontend/2aeb0c5c82f1fb3c7c5053ebdcf1fe32e8b5cd01/src/assets/CS_Star_2.svg"
             width={40}
             className="animated"
             alt="a star moving"
